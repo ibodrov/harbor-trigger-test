@@ -11,6 +11,9 @@ triggers:
       arguments:
         eventSource: harbor
 
+configuration:
+  runtime: concord-v2
+
 flows:
   default:
     - log: "Hello!"
