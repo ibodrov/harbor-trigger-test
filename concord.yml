@@ -1,0 +1,17 @@
+triggers:
+  - harbor:
+      version: 2
+      entryPoint: default
+      conditions:
+        type: pushImage
+        event_data:
+          resources:
+            - tag: latest
+          repository:
+            name: starburst-cloud
+      arguments:
+        eventSource: harbor
+
+flows:
+  default:
+    - log: "Hello!"
