@@ -1,6 +1,6 @@
 triggers:
   - harbor:
-          version: 2
+      version: 2
       entryPoint: default
       conditions:
         type: pushImage
