@@ -1,7 +1,7 @@
 triggers:
   - harbor:
       version: 2
-      entryPoint: default
+      entryPoint: deploy
       conditions:
         type: pushImage
         event_data:
@@ -9,8 +9,6 @@ triggers:
             - tag: latest
           repository:
             name: starburst-cloud
-      arguments:
-        eventSource: harbor
 
 configuration:
   runtime: concord-v2
